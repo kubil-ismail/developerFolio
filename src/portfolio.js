@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 /* Change this file to get your personal Portfolio */
 
 // To change portfolio colors globally go to the  _globalColor.scss file
@@ -20,28 +21,23 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Bilkis Ismail",
+  title: "Hi all, I'm Bilkis",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A passionate Full Stack Web Developer having an experience 4+ years of building Web with React JS, Next JS, Node JS and some other cool libraries and frameworks."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+  // resumeLink:
+  //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
+  github: "https://github.com/kubil-ismail",
+  linkedin: "https://www.linkedin.com/in/bilkis-ismail/",
+  gmail: "bilkisismail07@gmail.com",
+  medium: "https://medium.com/@bilkisismail07",
   display: true // Set true to display this section, defaults to false
 };
 
@@ -49,14 +45,19 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "Full Stack Web Developer who wants to explore every tech stack",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Turning Web Design from Figma / Adobe XD into a interactive website using React / Next JS."
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Integration of third party services such as Rest API, Firebase, Graph QL and Websocket."
+    ),
+    emoji(
+      "⚡ Improve website performance and increased search engine rankings."
+    ),
+    emoji(
+      "⚡ Developed microservice with Express Js, Redis and MySQL/PostgreSQL."
     )
   ],
 
@@ -65,56 +66,68 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
+      skillName: "React JS",
       fontAwesomeClassname: "fab fa-react"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "Next JS",
+      icons: "next",
+      isIcons: true
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
+      skillName: "Material UI",
+      src: "/images/mui.png",
+      isImage: true
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "Express JS",
+      icons: "express",
+      isIcons: true
     },
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
+      skillName: "Node JS",
+      fontAwesomeClassname: "fab fa-node-js"
     },
     {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
+      skillName: "Firebase",
       fontAwesomeClassname: "fas fa-fire"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git-alt"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "Bootstrap",
+      fontAwesomeClassname: "fab fa-bootstrap"
+    },
+    {
+      skillName: "Sass",
+      fontAwesomeClassname: "fab fa-sass"
+    },
+    {
+      skillName: "GraphQL",
+      icons: "graphql",
+      isIcons: true
+    },
+    {
+      skillName: "Mysql",
+      icons: "mysql",
+      isIcons: true
+    },
+    {
+      skillName: "Postgres",
+      icons: "postgres",
+      isIcons: true
+    },
+    {
+      skillName: "Sequelize",
+      icons: "sequelize",
+      isIcons: true
+    },
+    {
+      skillName: "PHP",
+      icons: "php",
+      isIcons: true
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -123,18 +136,21 @@ https://fontawesome.com/icons?d=gallery */
 // Education Section
 
 const educationInfo = {
-  display: true, // Set false to hide this section, defaults to true
+  display: false, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
+      schoolName: "Pijar Camp",
       logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      subHeader: "Fullstack Mobile Developer",
+      duration: "Juni 2020 - August 2020",
+      desc: "Learned basic javascript programming and implemented it in a case study using React JS, React Native and Express JS for 3 months."
+    },
+    {
+      schoolName: "Pijar Camp",
+      logo: require("./assets/images/harvardLogo.png"),
+      subHeader: "Fullstack Mobile Developer",
+      duration: "Juni 2020 - August 2020",
+      desc: "Learned basic javascript programming and implemented it in a case study using React JS, React Native and Express JS for 3 months."
     },
     {
       schoolName: "Stanford University",
@@ -174,29 +190,36 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      role: "Technical Trainer",
+      company: "Pijar Camp",
+      companylogo: require("./assets/images/pijarcamp.svg"),
+      date: "May 2022 – Current",
+      desc: "",
+      color: "#3088C8"
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Front End Developer",
+      company: "Realco",
+      companylogo: require("./assets/images/realco.webp"),
+      date: "Dec 2021 – Jan 2022",
+      desc: "",
+      color: "#116839"
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Full Stack Developer",
+      company: "Infomedia Nusantara",
+      companylogo: require("./assets/images/infomedia.png"),
+      date: "Aug 2020 – Sep 2022",
+      desc: "",
+      color: "#EB2329"
+    },
+    {
+      role: "Full Stack Developer",
+      company: "Positive Republik",
+      companylogo: require("./assets/images/poster.png"),
+      date: "Feb 2019 – Mar 2020",
+      desc: "",
+      color: "#000000"
     }
   ]
 };
@@ -212,29 +235,53 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
+  title: "Portfolio",
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/realco.png"),
+      projectName: "Realco",
+      projectDesc: "Built with Next JS and Material UI.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://realco.co.id"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/realfood.png"),
+      projectName: "Realfood",
+      projectDesc: "Built With Next JS, Material UI and GraphQL.",
       footerLink: [
         {
           name: "Visit Website",
           url: "http://nextu.se/"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/layton.png"),
+      projectName: "Layton",
+      projectDesc: "Built with Next JS and Material UI.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://layton.co.id"
+        }
+        //  you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/portal-on5.png"),
+      projectName: "ON 5",
+      projectDesc:
+        "Built with React JS, Express JS, Material UI, Vonage and Websocket.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://portal.on5.co.id"
         }
       ]
     }
@@ -252,52 +299,46 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Front-End Web Developer Expert",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Completed learned front-end web applications that are responsive, have good accessibility, easy to maintain, testable and have good performance",
+      image: require("./assets/images/dicoding.png"),
+      imageAlt: "Dicoding Indonesia",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          name: "View Certification",
+          url: "https://www.dicoding.com/certificates/0LZ03OVW3Z65"
         }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "Fullstack Mobile Developer",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+        "Learned basic javascript programming and implemented it in a case study using React JS, React Native and Express JS for 3 months.",
+      image: require("./assets/images/arkademy.png"),
+      imageAlt: "Arkademy",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+          name: "View Certification",
+          url: "https://media.licdn.com/dms/image/C562DAQFH_tKeKIx6VQ/profile-treasury-document-images_1920/1/1606670377444?e=1673481600&v=beta&t=fBv4mhIuNl5Lphnh6lrGUfn8vtQyHyXCom0OBEfzkzM"
         }
       ]
     },
-
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
+      title: "First Place of Web Design",
+      subtitle:
+        "First place winner in a web design company profile competition held by HIFEST Tangerang Raya.",
+      image: require("./assets/images/umt.png"),
+      imageAlt: "Muhammadiyah Tangerang",
+      footerLink: []
+    },
+    {
+      title: "First Place of Prototype and business process",
+      subtitle:
+        "First place winner in a prototype and business process held by Global Institute of Technology and Business.",
+      image: require("./assets/images/global-institute.webp"),
+      imageAlt: "Muhammadiyah Tangerang",
+      footerLink: []
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -343,7 +384,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,7 +397,7 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
@@ -371,10 +412,10 @@ const contactInfo = {
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,

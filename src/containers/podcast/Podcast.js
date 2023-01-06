@@ -29,24 +29,7 @@ export default function Podcast() {
           </p>
         </div>
         <div className="podcast-main-div">
-          {podcastSection.podcast.map((podcastLink, i) => {
-            if (!podcastLink) {
-              console.log(
-                `Podcast link for ${podcastSection.title} is missing`
-              );
-            }
-            return (
-              <div key={i}>
-                <iframe
-                  className="podcast"
-                  src={podcastLink}
-                  frameBorder="0"
-                  scrolling="no"
-                  title="Podcast"
-                ></iframe>
-              </div>
-            );
-          })}
+         
         </div>
       </div>
     </Fade>

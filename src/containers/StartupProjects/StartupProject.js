@@ -49,6 +49,7 @@ export default function StartupProject() {
                         src={project.image}
                         alt={project.projectName}
                         className="card-image"
+                        style={{height: "200px !important"}}
                       ></img>
                     </div>
                   ) : null}

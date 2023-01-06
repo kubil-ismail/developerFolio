@@ -1,21 +1,21 @@
-import React, {useState, createRef} from "react";
+import React, {createRef} from "react";
 import "./ExperienceCard.scss";
-import ColorThief from "colorthief";
+// import ColorThief from "colorthief";
 
 export default function ExperienceCard({cardInfo, isDark}) {
-  const [colorArrays, setColorArrays] = useState([]);
+  // const [colorArrays, setColorArrays] = useState([]);
   const imgRef = createRef();
 
   function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
+    // const colorThief = new ColorThief();
+    // setColorArrays(["#3088C8"]);
   }
 
-  function rgb(values) {
-    return typeof values === "undefined"
-      ? null
-      : "rgb(" + values.join(", ") + ")";
-  }
+  // function rgb(values) {
+  //   return typeof values === "undefined"
+  //     ? null
+  //     : "rgb(" + values.join(", ") + ")";
+  // }
 
   const GetDescBullets = ({descBullets, isDark}) => {
     return descBullets
@@ -32,10 +32,15 @@ export default function ExperienceCard({cardInfo, isDark}) {
 
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
-      <div style={{background: rgb(colorArrays)}} className="experience-banner">
+      <div
+        style={{background: cardInfo?.color ?? "#fff"}}
+        className="experience-banner"
+      >
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
-          <h5 className="experience-text-company">{cardInfo.company}</h5>
+          <h5 className="experience-text-company" style={{marginTop: "-20px"}}>
+            {cardInfo.company}
+          </h5>
         </div>
 
         <img
@@ -45,6 +50,12 @@ export default function ExperienceCard({cardInfo, isDark}) {
           src={cardInfo.companylogo}
           alt={cardInfo.company}
           onLoad={() => getColorArrays()}
+          style={{
+            backgroundColor: "#fff",
+            borderRadius: "10px",
+            padding: "5px",
+            marginTop: "-15px"
+          }}
         />
       </div>
       <div className="experience-text-details">
